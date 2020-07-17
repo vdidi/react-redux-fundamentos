@@ -9,16 +9,20 @@ const reducers = combineReducers({
           ...state,
           min: action.payload
         }
+      case 'NUM_MAX_ALTERADO':
+        return {
+          ...state,
+          max: action.payload
+        }  
 
-        default:
-          return {
-            min: 7,
-            max: 30
-          }
+      default:
+        return {
+          min: 7,
+          max: 30
+        }
     }
   },
   nomes: function(state, action) {
-    // console.log(state, ' ', action)
     return [
       'Ana',
       'Bia',
